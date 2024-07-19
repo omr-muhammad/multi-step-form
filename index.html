@@ -17,9 +17,11 @@
   </head>
   <body>
     <main class="container">
+      <!--  -->
+      <!-- START SIDE BAR -->
       <aside>
         <div class="steps">
-          <div class="step">
+          <div class="step active">
             <div class="step-num">1</div>
             <div class="text">
               <h2 class="title">step 1</h2>
@@ -49,7 +51,69 @@
           </div>
         </div>
       </aside>
+      <!-- END SIDE BAR -->
+      <!--  -->
+      <!--  -->
+      <!-- START FORM SECTION -->
+      <section class="step-displayer">
+        <div class="header">
+          <h2 class="title">Personal Info</h2>
+          <h3 class="subtitle">
+            Please provide your name, email address, and phone number.
+          </h3>
+        </div>
+        <div class="step-content">
+          <form>
+            <div class="name">
+              <label for="username">Name</label>
+              <input
+                required
+                type="text"
+                id="username"
+                placeholder="e.g. Stephen King"
+                class="form-input"
+              />
+            </div>
+            <div class="email">
+              <label for="email">Email Address</label>
+              <input
+                required
+                type="email"
+                id="email"
+                placeholder="e.g. stephenking@lorem.com"
+                class="form-input"
+              />
+            </div>
+            <div class="phone-number">
+              <label for="phone-number">Phone Number</label>
+              <input
+                required
+                type="tel"
+                id="email"
+                placeholder="e.g. +1 234 567 890"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{3,4}"
+                class="form-input"
+              />
+            </div>
+            <div class="actions-btns active">
+              <!-- Not Rendered At First Step -->
+              <button class="btn back-btn">Go Back</button>
+              <button class="btn next-btn" type="submit">Next Step</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- END FORM SECTION -->
+      <!-- -->
     </main>
+
+    <footer class="footer">
+      <div class="actions-btns">
+        <!-- Not Rendered At First Step -->
+        <button class="btn back-btn">Go Back</button>
+        <button class="btn next-btn" type="submit">Next Step</button>
+      </div>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

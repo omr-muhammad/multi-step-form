@@ -1,4 +1,5 @@
 @use "./index" as *;
+@use "./step-one.scss";
 
 *,
 *::after,
@@ -8,24 +9,35 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-txt-color: hsl(213, 96%, 18%); // Marine blue
+  --sub-placeholder-txt: hsl(231, 11%, 63%); // Cool gray
+  --pricing-br-color: hsl(243, 100%, 62%); // Purplish blue
+  --steps-bg-color: hsl(206, 94%, 87%); // Light blue
+  --steps-txt-color: hsl(228, 100%, 84%); // Pastel blue
+  --main-bg-color: hsl(217, 100%, 97%); // Magnolia
+  --form-bg-color: hsl(231, 100%, 99%); // Alabaster
+  --white: white;
+  --error-color: hsl(354, 84%, 57%); // Strawberry red
+}
+
 body {
   font-family: U-medium;
   background-color: var(--main-bg-color);
   min-height: 100svh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 main.container {
   width: 100%;
-  display: grid;
   grid-template-columns: 1fr;
 }
 
 aside {
   background-image: url(/bg-sidebar-mobile.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   height: 200px;
   width: 100%;
 
@@ -33,8 +45,7 @@ aside {
     display: flex;
     justify-content: center;
     gap: 1.25rem;
-    padding: 2rem;
-    margin: 1.25rem auto;
+    padding: 3rem 2rem;
 
     .step {
       display: flex;
@@ -69,17 +80,115 @@ aside {
   }
 }
 
+.step-displayer {
+  height: fit-content;
+  padding: 2rem 1rem;
+  background-color: var(--white);
+  margin: 0 1.25rem;
+  transform: translateY(-80px);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-transform: translateY(-80px);
+  -moz-transform: translateY(-80px);
+  -ms-transform: translateY(-80px);
+  -o-transform: translateY(-80px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  .header {
+    .title {
+      font-size: 1.6rem;
+      color: var(--main-txt-color);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-weight: 500;
+      color: var(--sub-placeholder-txt);
+    }
+  }
+}
+
+.actions-btns {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+}
+
+footer {
+  display: none;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: var(--white);
+  width: 100%;
+
+  &.active {
+    display: block;
+  }
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: var(--sub-placeholder-txt);
+
+  &:hover {
+    color: var(--main-txt-color);
+  }
+}
+
+.next-btn {
+  background-color: var(--main-txt-color);
+  color: var(--white);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  padding: 10px 20px;
+  align-self: flex-end;
+
+  &:hover {
+    background-color: lighten(hsl(213, 96%, 18%), 5);
+  }
+}
+
 @media (min-width: 768px) {
   body {
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   main.container {
-    grid-template-columns: 20rem 1fr;
+    width: 80%;
+    max-width: 71.25rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 33.75rem;
+    padding: 10px;
+    margin: 0 1rem;
     background-color: var(--form-bg-color);
-    width: 65rem;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -88,8 +197,9 @@ aside {
   }
 
   aside {
+    user-select: none;
     background-image: url(/bg-sidebar-desktop.svg);
-    height: 568px;
+    height: 100%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -122,6 +232,55 @@ aside {
           }
         }
       }
+    }
+  }
+
+  .step-displayer {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    height: auto;
+    background-color: transparent;
+    margin: 0;
+    gap: 2rem;
+
+    .header {
+      .title {
+        font-size: 2rem;
+        color: var(--main-txt-color);
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        color: var(--sub-placeholder-txt);
+      }
+    }
+
+    .step-content {
+      flex: 1;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .step-displayer {
+    padding: 1.5rem 3rem 10px;
+
+    .header .title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .step-displayer {
+    padding: 3rem 5rem 10px;
+
+    .header .subtitle {
+      font-size: 1.2rem;
     }
   }
 }
