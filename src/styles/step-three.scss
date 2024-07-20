@@ -1,0 +1,73 @@
+.add-ons {
+  display: grid;
+  gap: 1rem;
+
+  .add-on {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--sub-placeholder-txt);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &.active,
+    &:hover {
+      border-color: var(--pricing-br-color);
+    }
+
+    &.active {
+      background-color: var(--main-bg-color);
+    }
+
+    .check-input input {
+      width: 20px;
+      height: 20px;
+    }
+
+    .text {
+      flex: 1;
+
+      .title {
+        color: var(--main-txt-color);
+        margin-bottom: 5px;
+        font-size: 1rem;
+      }
+
+      .subtitle {
+        color: var(--sub-placeholder-txt);
+        font-size: 14px;
+      }
+    }
+
+    .price {
+      color: var(--pricing-br-color);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .add-ons .add-on {
+    .check-input input {
+      width: 25px;
+      height: 25px;
+    }
+
+    .text {
+      .title {
+        font-size: 1.2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    .price {
+      font-size: 1.1rem;
+    }
+  }
+}

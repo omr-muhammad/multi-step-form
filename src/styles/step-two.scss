@@ -1,0 +1,107 @@
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .plan {
+    padding: 1rem;
+    border: 1px solid var(--sub-placeholder-txt);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &:hover,
+    &.active {
+      border-color: var(--main-txt-color);
+    }
+
+    &.active {
+      background-color: var(--main-bg-color);
+    }
+
+    .plan-title {
+      color: var(--main-txt-color);
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .plan-price {
+      color: var(--sub-placeholder-txt);
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.plans-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  font-weight: 700;
+  padding: 15px;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--sub-placeholder-txt);
+
+  > span.active {
+    color: var(--main-txt-color);
+  }
+
+  .switcher {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    background-color: var(--main-txt-color);
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+
+    .switcher-ball {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      background-color: var(--white);
+
+      &.year {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .plans {
+    flex-direction: row;
+
+    .plan {
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+}

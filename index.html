@@ -57,50 +57,43 @@
       <!-- START FORM SECTION -->
       <section class="step-displayer">
         <div class="header">
-          <h2 class="title">Personal Info</h2>
-          <h3 class="subtitle">
-            Please provide your name, email address, and phone number.
+          <h2 class="title" data-step-title>Pick add-ons</h2>
+          <h3 class="subtitle" data-step-subtitle>
+            Add-ons help enhance your gaming experience
           </h3>
         </div>
-        <div class="step-content">
-          <form>
-            <div class="name">
-              <label for="username">Name</label>
-              <input
-                required
-                type="text"
-                id="username"
-                placeholder="e.g. Stephen King"
-                class="form-input"
-              />
+        <div class="step-content" data-step-content>
+          <div class="add-ons">
+            <div class="add-on">
+              <div class="check-input"><input type="checkbox" /></div>
+              <div class="text">
+                <h4 class="title">Online services</h4>
+                <p class="subtitle">Access to multiplayer games</p>
+              </div>
+              <div class="price">+$1/mo</div>
             </div>
-            <div class="email">
-              <label for="email">Email Address</label>
-              <input
-                required
-                type="email"
-                id="email"
-                placeholder="e.g. stephenking@lorem.com"
-                class="form-input"
-              />
+            <div class="add-on">
+              <div class="check-input"><input type="checkbox" /></div>
+              <div class="text">
+                <h4 class="title">Larger storage</h4>
+                <p class="subtitle">Extra 1TB of cloud save</p>
+              </div>
+              <div class="price">+$2/mo</div>
             </div>
-            <div class="phone-number">
-              <label for="phone-number">Phone Number</label>
-              <input
-                required
-                type="tel"
-                id="email"
-                placeholder="e.g. +1 234 567 890"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{3,4}"
-                class="form-input"
-              />
+            <div class="add-on">
+              <div class="check-input"><input type="checkbox" /></div>
+              <div class="text">
+                <h4 class="title">Customizable profile</h4>
+                <p class="subtitle">Custom theme on your profile</p>
+              </div>
+              <div class="price">+$2/mo</div>
             </div>
-            <div class="actions-btns active">
-              <!-- Not Rendered At First Step -->
-              <button class="btn back-btn">Go Back</button>
-              <button class="btn next-btn" type="submit">Next Step</button>
-            </div>
-          </form>
+          </div>
+        </div>
+        <div class="actions-btns active">
+          <!-- Not Rendered At First Step -->
+          <button class="btn back-btn">Go Back</button>
+          <button class="btn next-btn" type="submit">Next Step</button>
         </div>
       </section>
       <!-- END FORM SECTION -->

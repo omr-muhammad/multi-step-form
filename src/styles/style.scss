@@ -1,5 +1,7 @@
 @use "./index" as *;
 @use "./step-one.scss";
+@use "./step-two.scss";
+@use "./step-three.scss";
 
 *,
 *::after,
@@ -37,7 +39,7 @@ main.container {
 aside {
   background-image: url(/bg-sidebar-mobile.svg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   height: 200px;
   width: 100%;
 
@@ -82,7 +84,7 @@ aside {
 
 .step-displayer {
   height: fit-content;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 10px;
   background-color: var(--white);
   margin: 0 1.25rem;
   transform: translateY(-80px);
@@ -183,8 +185,8 @@ footer {
     width: 80%;
     max-width: 71.25rem;
     display: grid;
-    grid-template-columns: 300px 1fr;
-    height: 33.75rem;
+    grid-template-columns: 240px 1fr;
+    min-height: 33.75rem;
     padding: 10px;
     margin: 0 1rem;
     background-color: var(--form-bg-color);
@@ -228,7 +230,7 @@ footer {
           .subtitle {
             color: var(--white);
             letter-spacing: 2px;
-            font-size: 1rem;
+            font-size: 14px;
           }
         }
       }
@@ -262,10 +264,37 @@ footer {
     .step-content {
       flex: 1;
     }
+
+    .actions-btns {
+      margin-top: auto;
+
+      .btn {
+        font-size: 1rem;
+      }
+
+      .next-btn {
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  main.container {
+    grid-template-columns: 270px 1fr;
+  }
+
+  aside .steps .step .text .subtitle {
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1000px) {
+  main.container {
+    grid-template-columns: 300px 1fr;
+  }
   .step-displayer {
     padding: 1.5rem 3rem 10px;
 
