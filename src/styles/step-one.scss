@@ -29,7 +29,7 @@ form {
       color: var(--main-txt-color) !important;
 
       &:focus {
-        border-color: var(--main-txt-color);
+        border-color: var(--pricing-br-color);
       }
 
       &:user-invalid {
