@@ -12,8 +12,8 @@ export const stepsHeadings = {
     subtitle: "Add-ons help enhance your gaming experience",
   },
   stepFour: {
-    title: "Personal Info",
-    subtitle: "Please provide your name, email address, and phone number.",
+    title: "Finishing up",
+    subtitle: "Double-check every thing looks OK before confirming.",
   },
 };
 
@@ -133,5 +133,92 @@ export const stepTwo = `
               </div>
               <span>Yearly</span>
             </div>
+          </div>
+`;
+
+const stepThree = `
+          <div class="add-ons">
+            <div class="add-on">
+              <div class="check-input"><input type="checkbox" /></div>
+              <div class="text">
+                <h4 class="title">Online services</h4>
+                <p class="subtitle">Access to multiplayer games</p>
+              </div>
+              <div class="price">+$1/mo</div>
+            </div>
+            <div class="add-on">
+              <div class="check-input"><input type="checkbox" /></div>
+              <div class="text">
+                <h4 class="title">Larger storage</h4>
+                <p class="subtitle">Extra 1TB of cloud save</p>
+              </div>
+              <div class="price">+$2/mo</div>
+            </div>
+            <div class="add-on">
+              <div class="check-input"><input type="checkbox" /></div>
+              <div class="text">
+                <h4 class="title">Customizable profile</h4>
+                <p class="subtitle">Custom theme on your profile</p>
+              </div>
+              <div class="price">+$2/mo</div>
+            </div>
+          </div>
+`;
+
+const stepFour = `
+          <div class="picks-summary">
+            <div class="arcade-pick">
+              <div class="text">
+                <h3 class="title">Arcade (Monthly)</h3>
+                <span>Change</span>
+              </div>
+              <p class="price">$9/mo</p>
+            </div>
+
+            <hr />
+
+            <div class="add-ons-picks">
+              <div>
+                <span>Online services</span>
+                <span>$+1/mo</span>
+              </div>
+              <div>
+                <span>Larger storage</span>
+                <span>$+2/mo</span>
+              </div>
+            </div>
+          </div>
+          <div class="total-price">
+            <span>Total (per month)</span>
+            <span>$12/mo</span>
+          </div>
+`;
+
+const thankYou = `
+          <div class="thank-you">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+            >
+              <g fill="none">
+                <circle cx="40" cy="40" r="40" fill="#F9818E" />
+                <path
+                  fill="#E96170"
+                  d="M48.464 79.167c.768-.15 1.53-.321 2.288-.515a40.04 40.04 0 0 0 3.794-1.266 40.043 40.043 0 0 0 3.657-1.63 40.046 40.046 0 0 0 12.463-9.898A40.063 40.063 0 0 0 78.3 51.89c.338-1.117.627-2.249.867-3.391L55.374 24.698a21.6 21.6 0 0 0-15.332-6.365 21.629 21.629 0 0 0-15.344 6.365c-8.486 8.489-8.486 22.205 0 30.694l23.766 23.775Z"
+                />
+                <path
+                  fill="#FFF"
+                  d="M40.003 18.333a21.58 21.58 0 0 1 15.31 6.351c8.471 8.471 8.471 22.158 0 30.63-8.47 8.47-22.156 8.47-30.627 0-8.47-8.472-8.47-22.159 0-30.63a21.594 21.594 0 0 1 15.317-6.35Zm9.865 15c-.316.028-.622.15-.872.344l-12.168 9.13-5.641-5.642c-1.224-1.275-3.63 1.132-2.356 2.356l6.663 6.663c.56.56 1.539.63 2.173.156l13.326-9.995c1.122-.816.43-2.993-.956-3.013a1.666 1.666 0 0 0-.17 0Z"
+                />
+              </g>
+            </svg>
+            <h2>Thank you!</h2>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
           </div>
 `;

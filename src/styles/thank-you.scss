@@ -1,0 +1,22 @@
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+
+  svg {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: var(--main-txt-color);
+    font-size: 2rem;
+  }
+
+  p {
+    text-align: center;
+    line-height: 1.6;
+    color: var(--sub-placeholder-txt);
+  }
+}

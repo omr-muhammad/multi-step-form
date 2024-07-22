@@ -2,6 +2,8 @@
 @use "./step-one.scss";
 @use "./step-two.scss";
 @use "./step-three.scss";
+@use "./step-four.scss";
+@use "./thank-you.scss";
 
 *,
 *::after,
@@ -276,6 +278,7 @@ footer {
         padding: 15px 25px;
         border-radius: 10px;
         font-weight: 500;
+        margin-left: auto;
       }
     }
   }

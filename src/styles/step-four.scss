@@ -1,0 +1,81 @@
+.picks-summary {
+  background-color: var(--main-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  .arcade-pick {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .text {
+      color: var(--main-txt-color);
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: var(--sub-placeholder-txt);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--pricing-br-color);
+      }
+    }
+
+    .price {
+      color: var(--main-txt-color);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--sub-placeholder-txt);
+    margin-block: 1.25rem;
+  }
+
+  .add-ons-picks {
+    > div {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span:first-child {
+        color: var(--sub-placeholder-txt);
+        font-weight: 500;
+      }
+
+      span:last-child {
+        color: var(--main-txt-color);
+      }
+    }
+  }
+}
+
+.total-price {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span:first-child {
+    color: var(--sub-placeholder-txt);
+  }
+
+  span:last-child {
+    color: var(--pricing-br-color);
+    font: {
+      weight: 700;
+      size: 1.25rem;
+    }
+  }
+}
